@@ -25,6 +25,9 @@ router.post('/korisnici', async (req, res) => {
     }
 })
 
+// POST-ŠALJE NA BAZU(SERVER), DELETE-BRISE, GET-DOHVACA, PATCH- IZMJENA(cijelo fajl), PUT-DIO FAJLA
+
+
 router.post('/korisnici/login', async(req, res) => {
     try{
         const korisnik = await Korisnik.findByCredentials(req.body.email, req.body.password)
